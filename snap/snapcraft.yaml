@@ -29,7 +29,7 @@ apps:
     command: bin/subiquity/bin/subiquity-loadkeys
 
   ubuntu-core-desktop-installer:
-    command: bin/ubuntu-core-desktop-installer
+    command: bin/ubuntu-core-desktop-installer --core-install
     command-chain: [bin/desktop-launch, bin/disable-automount-launch, bin/wayland-launch]
     daemon: simple
     restart-condition: always
