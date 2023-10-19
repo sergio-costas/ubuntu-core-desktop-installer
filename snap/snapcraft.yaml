@@ -38,6 +38,7 @@ apps:
       PATH: $SNAP/usr/bin:$SNAP/bin:$PATH
       LIBGL_DRIVERS_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/dri
       GIO_MODULE_DIR: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/gio/modules
+      LD_LIBRARY_PATH: ${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}$SNAP/usr/lib:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET
       LIVE_RUN: 1
       LOG_LEVEL: debug
       SNAP_PYTHON: python3
@@ -58,6 +59,7 @@ apps:
       # Setup XKB
       XKB_CONFIG_ROOT: $SNAP/usr/share/X11/xkb
       XCURSOR_PATH: $SNAP/usr/share/icons
+      LD_LIBRARY_PATH: ${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}$SNAP/usr/lib:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET
 
   probert:
     command: bin/probert
