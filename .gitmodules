@@ -1,4 +1,3 @@
 [submodule "ubuntu-desktop-provision"]
 	path = vendor/ubuntu-desktop-provision
-	url = https://github.com/sergio-costas/ubuntu-desktop-provision.git
-	branch = UDENG-1553-add-right-end-page-in-the-installer-for-core-desktop
+	url = https://github.com/canonical/ubuntu-desktop-provision.git
