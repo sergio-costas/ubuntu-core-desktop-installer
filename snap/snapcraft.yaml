@@ -13,7 +13,7 @@ architectures:
 
 package-repositories:
  - type: apt
-   ppa: mir-team/dev
+   ppa: mir-team/test
 
 apps:
   subiquity-server:
