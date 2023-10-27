@@ -33,9 +33,4 @@ then
   export MIR_SERVER_ENABLE_X11=1
 fi
 
-if ! cat /proc/cpuinfo |grep -i qemu
-then
-  DISPLAY_AUTOSCALE="--display-autoscale=1200"
-fi
-
-exec "${bindir}"miriway-shell ${DISPLAY_AUTOSCALE} --shell-component="swaybg -c #2C001E"
+exec "${bindir}"miriway-shell --display-autoscale=1200 --shell-component="swaybg -c #2C001E"
