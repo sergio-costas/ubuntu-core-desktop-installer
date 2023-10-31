@@ -16,9 +16,9 @@ Widget _buildFirstSlide(BuildContext context) {
       Padding(
         padding: const EdgeInsets.all(40),
         child: FractionallySizedBox(
-          widthFactor: 0.5,
+          widthFactor: 0.8,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(context.l10n.firstSlideHeader, style: headerStyle),
               const SizedBox(height: 20),
