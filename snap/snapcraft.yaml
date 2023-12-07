@@ -13,11 +13,20 @@ architectures:
 
 package-repositories:
  - type: apt
-   ppa: mir-team/test
+   ppa: mir-team/dev
 
 apps:
   subiquity-server:
     command: bin/subiquity-server
+    daemon: simple
+    restart-condition: always
+    environment:
+      PATH_ORIG: $PATH
+      PYTHONPATH_ORIG: $PYTHONPATH
+      LD_LIBRARY_PATH_ORIG: $LD_LIBRARY_PATH
+
+  terminus:
+    command: usr/bin/terminus
     daemon: simple
     restart-condition: always
     environment:
@@ -153,6 +162,14 @@ parts:
       - locales
     prime:
       - -lib/systemd/system/*
+
+  terminus:
+    plugin: nil
+    stage-packages:
+      - terminus
+      - dconf-cli
+      - d-feet
+      - dconf-editor
 
   flutter-git:
     source: https://github.com/flutter/flutter.git
